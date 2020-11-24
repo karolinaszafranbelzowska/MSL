@@ -8,15 +8,18 @@ app = fl.Flask(__name__)
 
 # Add root route.
 @app.route("/")
-def home():
-  return app.send_static_file('index.html')
+def stdnor():
+    return {"value": np.random.standard.normal()}
+
+# def home():
+#  return app.send_static_file('index.html')
 
 # Add uniform route.
-@app.route('/api/uniform')
-def uniform():
-  return {"value": np.random.uniform()}
+# @app.route('/api/uniform')
+# def uniform():
+#  return {"value": np.random.uniform()}
 
 # Add normal route.
-@app.route('/api/normal')
-def normal():
-  return {"value": np.random.normal()}
+# @app.route('/api/normal')
+# def normal():
+  # return {"value": np.random.normal()}
